@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arencloud | Premium AI Automation Agency</title>
+    <meta name="description" content="Arencloud delivers bespoke artificial intelligence integrations, cognitive workflows, and autonomous agents for enterprise automation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Language Selection Overlay (Appears on entry) -->
+    <div class="lang-selector-overlay" id="langOverlay">
+        <div class="lang-content-box">
+            <h2 class="lang-heading">SELECT SYSTEM LANGUAGE</h2>
+            <p class="lang-subheading">Choose your localization environment for Arencloud AI Agency</p>
+            <div class="lang-buttons-grid">
+                <button class="lang-opt-btn" data-lang="en">
+                    <span class="lang-abbr">EN</span>
+                    <span class="lang-name">English</span>
+                </button>
+                <button class="lang-opt-btn" data-lang="it">
+                    <span class="lang-abbr">IT</span>
+                    <span class="lang-name">Italiano</span>
+                </button>
+                <button class="lang-opt-btn" data-lang="de">
+                    <span class="lang-abbr">DE</span>
+                    <span class="lang-name">Deutsch</span>
+                </button>
+                <button class="lang-opt-btn" data-lang="fr">
+                    <span class="lang-abbr">FR</span>
+                    <span class="lang-name">Français</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Glow Background -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-symbol">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" fill="currentColor"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" fill="currentColor"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" fill="currentColor"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" fill="currentColor" fill-opacity="0.3"/>
+                </svg>
+            </span>
+            <span class="logo-text">ARENCLOUD</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#hero" class="nav-link active" data-index="0" data-translate="nav_home">Home</a>
+            <a href="#services" class="nav-link" data-index="1" data-translate="nav_services">Services</a>
+            <a href="#solutions" class="nav-link" data-index="2" data-translate="nav_solutions">Solutions</a>
+            <a href="#contact" class="nav-link" data-index="3" data-translate="nav_contact">Contact</a>
+        </nav>
+        
+        <!-- Header Language Switcher -->
+        <div class="header-lang-switch">
+            <button class="active-lang-btn" id="langSwitchBtn">EN</button>
+            <div class="lang-dropdown">
+                <span data-lang="en">EN</span>
+                <span data-lang="it">IT</span>
+                <span data-lang="de">DE</span>
+                <span data-lang="fr">FR</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Left Social Sidebar -->
+    <aside class="sidebar-left">
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+    </aside>
+
+    <!-- Right Slide Indicator -->
+    <aside class="sidebar-right">
+        <div class="active-number">.01</div>
+        <div class="scroll-tracker">
+            <div class="tracker-dot active" data-index="0"></div>
+            <div class="tracker-dot" data-index="1"></div>
+            <div class="tracker-dot" data-index="2"></div>
+            <div class="tracker-dot" data-index="3"></div>
+        </div>
+    </aside>
+
+    <!-- Scroll Containers -->
+    <main class="scroll-container">
+        
+        <!-- SECTION 01: HERO -->
+        <section id="hero" class="section-panel" data-index="0">
+            <div class="section-content hero-content">
+                <div class="agency-tag" data-translate="hero_tag">COGNITIVE ARCHITECTS</div>
+                <h1 class="hero-title" id="scramble-title">ARENCLOUD</h1>
+                <div class="hero-subtitle">
+                    <span id="scramble-desc" data-translate="hero_subtitle">AI AUTOMATION & INTELLIGENT AGENTS</span>
+                </div>
+                <div class="scroll-down-hint">
+                    <span class="line"></span>
+                    <span class="text" data-translate="hero_scroll">SCROLL</span>
+                </div>
+            </div>
+            <div class="section-bg-number">.01</div>
+        </section>
+
+        <!-- SECTION 02: SERVICES -->
+        <section id="services" class="section-panel" data-index="1">
+            <div class="section-content services-content">
+                <div class="section-header-row">
+                    <span class="section-num-label">.02</span>
+                    <h2 class="section-title" data-translate="title_capabilities">CAPABILITIES</h2>
+                </div>
+                
+                <!-- Horizontally scrollable container with perspective motion -->
+                <div class="carousel-outer-container">
+                    <div class="carousel-track" id="capabilitiesCarousel">
+                        <!-- AI Receptionist -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #ff416c, #ff4b2b);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_1">AI Receptionist</h3>
+                                <p class="cap-use" data-translate="cap_use_1">Useful for automated call answering, routing, and answering front-desk FAQs instantly 24/7.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Customer Support Agent -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #1f4068, #16c79a);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_2">AI Customer Support</h3>
+                                <p class="cap-use" data-translate="cap_use_2">Useful for handling high-volume customer inquiries, resolving tickets, and processing returns instantly.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€200</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Appointment Booking -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #f857a6, #ff5858);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_3">AI Appointment Booking</h3>
+                                <p class="cap-use" data-translate="cap_use_3">Useful for syncing calendars, scheduling meetings, sending reminders, and reducing booking drop-offs.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€20–€100</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_200">€200/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Email Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #4776e6, #8e54e9);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_4">AI Email Assistant</h3>
+                                <p class="cap-use" data-translate="cap_use_4">Useful for drafting professional replies, triaging inbox overflow, and auto-categorizing client requests.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€20–€100</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_300">€300/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Lead Generation Agent -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_5">AI Lead Gen Agent</h3>
+                                <p class="cap-use" data-translate="cap_use_5">Useful for crawling web sources, qualifying inbound leads, and building qualified marketing lists.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€200</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Sales Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #30cfd0, #330867);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_6">AI Sales Assistant</h3>
+                                <p class="cap-use" data-translate="cap_use_6">Useful for executing follow-ups, presenting pitch documents, and handling standard negotiation objections.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€100–€300</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_1000">€1,000/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Data Entry Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #00c6ff, #0072ff);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_7">AI Data Entry</h3>
+                                <p class="cap-use" data-translate="cap_use_7">Useful for extracting text from paperwork, importing records, and syncing multi-platform databases.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Invoice Processing -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #700d99, #ec008c);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_8">AI Invoice Processing</h3>
+                                <p class="cap-use" data-translate="cap_use_8">Useful for parsing bills, matching line items, verifying totals, and flag-marking anomalies.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Social Media Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #ff9966, #ff5e62);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_9">AI Social Media</h3>
+                                <p class="cap-use" data-translate="cap_use_9">Useful for writing creative captions, scheduling posts, and tracking audience engagement.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€20–€100</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Review Management -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #11998e, #38ef7d);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_10">AI Review Management</h3>
+                                <p class="cap-use" data-translate="cap_use_10">Useful for monitoring reviews, drafting polite responses, and auto-flagging negative feedback.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€20–€50</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_200">€200/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Meeting Notes Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #fc4a1a, #f7b733);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_11">AI Meeting Notes</h3>
+                                <p class="cap-use" data-translate="cap_use_11">Useful for transcribing calls, extracting key action items, and summarizing decisions.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€10–€50</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_200">€200/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI HR Screening Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_12">AI HR Screening</h3>
+                                <p class="cap-use" data-translate="cap_use_12">Useful for parsing resumes, checking candidate requirements, and scheduling initial interviews.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Document Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_13">AI Document Assistant</h3>
+                                <p class="cap-use" data-translate="cap_use_13">Useful for summarizing PDFs, generating contracts, and searching internal guidelines.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€20–€100</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_300">€300/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Knowledge Base Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #8a2387, #e94057, #f27121);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_14">AI Knowledge Base</h3>
+                                <p class="cap-use" data-translate="cap_use_14">Useful for answering employee questions using internal manuals and documentation.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_300">€300/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI WhatsApp Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #00b09b, #96c93d);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_15">AI WhatsApp Agent</h3>
+                                <p class="cap-use" data-translate="cap_use_15">Useful for instant messaging, sending shipping updates, and taking orders on mobile devices.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Follow-Up Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_16">AI Follow-Up Agent</h3>
+                                <p class="cap-use" data-translate="cap_use_16">Useful for maintaining contact with cold leads, sending check-ins, and recovering checkouts.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Analytics Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #4ca1af, #c4e0e5);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_17">AI Analytics Assistant</h3>
+                                <p class="cap-use" data-translate="cap_use_17">Useful for interpreting spreadsheets, highlighting sales trends, and generating reports.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€150</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Inventory Assistant -->
+                        <div class="capability-card" style="--grad: linear-gradient(135deg, #2c3e50, #fd746c);">
+                            <div class="card-inner">
+                                <div class="card-glow-bg"></div>
+                                <h3 class="cap-title" data-translate="cap_title_18">AI Inventory Assistant</h3>
+                                <p class="cap-use" data-translate="cap_use_18">Useful for forecasting stock demands, alerting restocks, and optimizing supply lines.</p>
+                                <div class="cap-metrics">
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_cost_lbl">Monthly Cost</span>
+                                        <span class="metric-val">€50–€200</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-lbl" data-translate="cap_savings_lbl">Min. Savings</span>
+                                        <span class="metric-val" data-translate="cap_savings_val_500">€500/mo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Custom Horizontal Scroll Indicator -->
+                    <div class="carousel-progress-bar-container">
+                        <div class="carousel-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-bg-number">.02</div>
+        </section>
+
+        <!-- SECTION 03: SOLUTIONS -->
+        <section id="solutions" class="section-panel" data-index="2">
+            <div class="section-content solutions-content">
+                <div class="section-header-row">
+                    <span class="section-num-label">.03</span>
+                    <h2 class="section-title" data-translate="title_solutions">SOLUTIONS</h2>
+                </div>
+
+                <div class="slider-wrapper">
+                    <!-- Left Arrow -->
+                    <button class="slider-btn prev-btn" aria-label="Previous Project">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+
+                    <!-- Solutions Slider Track -->
+                    <div class="solutions-slider">
+                        <!-- Solution 1 -->
+                        <div class="solution-slide active">
+                            <div class="solution-info">
+                                <span class="sol-tag" data-translate="sol_tag_1">FINANCIAL AUTOMATION</span>
+                                <h3 class="sol-title">Aether Ledger</h3>
+                                <p class="sol-description" data-translate="sol_desc_1">An autonomous AI compliance and data synthesis engine designed to reconcile thousands of international invoices against shifting regulations in real-time.</p>
+                                <a href="#contact" class="sol-action-btn">
+                                    <span data-translate="sol_action_btn">EXPLORE IMPLEMENTATION</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                            <div class="solution-visual">
+                                <div class="visual-card main-card">
+                                    <div class="visual-header">
+                                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                        <div class="window-title">Aether Dashboard</div>
+                                    </div>
+                                    <div class="visual-body">
+                                        <div class="chart-mock">
+                                            <div class="bar" style="--val: 40%"></div>
+                                            <div class="bar active" style="--val: 85%"></div>
+                                            <div class="bar" style="--val: 60%"></div>
+                                            <div class="bar" style="--val: 95%"></div>
+                                        </div>
+                                        <div class="stats-row">
+                                            <div class="stat-item">
+                                                <div class="stat-lbl" data-translate="stat_lbl_eff">Efficiency</div>
+                                                <div class="stat-val">+240%</div>
+                                            </div>
+                                            <div class="stat-item">
+                                                <div class="stat-lbl" data-translate="stat_lbl_acc">Accuracy</div>
+                                                <div class="stat-val">99.98%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visual-card back-card-left">
+                                    <div class="visual-body">
+                                        <span class="tag">Auditor Node</span>
+                                        <div class="text-line">Invoice #4809 Approved</div>
+                                    </div>
+                                </div>
+                                <div class="visual-card back-card-right">
+                                    <div class="visual-body">
+                                        <span class="tag">Schema Validation</span>
+                                        <div class="text-line-short">Matched EUR fields</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution 2 -->
+                        <div class="solution-slide">
+                            <div class="solution-slide-content" style="display:contents;">
+                                <div class="solution-info">
+                                    <span class="sol-tag" data-translate="sol_tag_2">HEALTHCARE WORKFLOWS</span>
+                                    <h3 class="sol-title">Helix Care</h3>
+                                    <p class="sol-description" data-translate="sol_desc_2">A secure agentic framework that extracts clinical records from legacy EHR structures, synthesizes patient histories, and alerts staff to key indicators.</p>
+                                    <a href="#contact" class="sol-action-btn">
+                                        <span data-translate="sol_action_btn">EXPLORE IMPLEMENTATION</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                                <div class="solution-visual">
+                                    <div class="visual-card main-card">
+                                        <div class="visual-header">
+                                            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="window-title">Helix Synthesis</div>
+                                        </div>
+                                        <div class="visual-body">
+                                            <div class="pulse-circle-container">
+                                                <div class="pulse-circle"></div>
+                                                <div class="pulse-text" data-translate="sync_text">Syncing</div>
+                                            </div>
+                                            <div class="stats-row">
+                                                <div class="stat-item">
+                                                    <div class="stat-lbl" data-translate="stat_lbl_time">Audit Time</div>
+                                                    <div class="stat-val">-92%</div>
+                                                </div>
+                                                <div class="stat-item">
+                                                    <div class="stat-lbl" data-translate="stat_lbl_sec">Security</div>
+                                                    <div class="stat-val">HIPAA</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="visual-card back-card-left">
+                                        <div class="visual-body">
+                                            <div class="text-line" data-translate="anon_active">Anonymization Active</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution 3 -->
+                        <div class="solution-slide">
+                            <div class="solution-slide-content" style="display:contents;">
+                                <div class="solution-info">
+                                    <span class="sol-tag" data-translate="sol_tag_3">LOGISTICS & SYSTEMS</span>
+                                    <h3 class="sol-title">Apex Route</h3>
+                                    <p class="sol-description" data-translate="sol_desc_3">An autonomous route planning and supply network AI system reacting dynamically to climate anomalies, shipping rates, and warehouse capacity feeds.</p>
+                                    <a href="#contact" class="sol-action-btn">
+                                        <span data-translate="sol_action_btn">EXPLORE IMPLEMENTATION</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                                <div class="solution-visual">
+                                    <div class="visual-card main-card">
+                                        <div class="visual-header">
+                                            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="window-title">Apex Grid</div>
+                                        </div>
+                                        <div class="visual-body">
+                                            <div class="grid-mock">
+                                                <span class="grid-node val-high"></span>
+                                                <span class="grid-node val-low"></span>
+                                                <span class="grid-node val-mid"></span>
+                                                <span class="grid-node val-high"></span>
+                                            </div>
+                                            <div class="stats-row">
+                                                <div class="stat-item">
+                                                    <div class="stat-lbl" data-translate="stat_lbl_savings">Fuel Savings</div>
+                                                    <div class="stat-val">$2.4M</div>
+                                                </div>
+                                                <div class="stat-item">
+                                                    <div class="stat-lbl" data-translate="stat_lbl_risk">Delay Risk</div>
+                                                    <div class="stat-val">0.05%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button class="slider-btn next-btn" aria-label="Next Project">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="section-bg-number">.03</div>
+        </section>
+
+        <!-- SECTION 04: CONTACT -->
+        <section id="contact" class="section-panel" data-index="3">
+            <div class="section-content contact-content">
+                <div class="contact-grid">
+                    
+                    <!-- Contact Left Info -->
+                    <div class="contact-info">
+                        <div class="section-header-row">
+                            <span class="section-num-label">.04</span>
+                            <h2 class="section-title" data-translate="title_engage">ENGAGE</h2>
+                        </div>
+                        <p class="contact-subtitle" data-translate="contact_sub">Let's build intelligent agency systems together.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <span class="label" data-translate="contact_hq_lbl">HEADQUARTERS</span>
+                                <span class="value">San Francisco, CA &amp; Remote</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label" data-translate="contact_talk_lbl">TALK TO US</span>
+                                <span class="value"><a href="mailto:partner@arencloud.com">partner@arencloud.com</a></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label" data-translate="contact_sec_lbl">SECURE ENCRYPTION</span>
+                                <span class="value" data-translate="contact_sec_val">PGP Key available upon request</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-card">
+                        <div class="card-glow"></div>
+                        <h3 class="form-title" data-translate="contact_form_title">INITIATE INQUIRY</h3>
+                        
+                        <form class="inquiry-form" id="contactForm">
+                            <div class="input-group">
+                                <input type="text" id="name" required placeholder=" " autocomplete="name">
+                                <label for="name" data-translate="lbl_name">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required placeholder=" " autocomplete="email">
+                                <label for="email" data-translate="lbl_email">Corporate Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="agency" placeholder=" ">
+                                <label for="agency" data-translate="lbl_org">Organization / Agency</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" required placeholder=" " rows="4"></textarea>
+                                <label for="message" data-translate="lbl_msg">Define the Challenge / Objective</label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span data-translate="btn_submit">TRANSMIT REQUISITION</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                        <div class="form-feedback-message" id="formFeedback"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-bg-number">.04</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
